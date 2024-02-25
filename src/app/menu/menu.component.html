@@ -8,9 +8,9 @@
         <input type="text" class="titleMenu" id="link">
 
         <div class="addPost" (click)="seleccionarArchivo()">
-            <label for="inputArchivo" class="labelArchivo"></label>
+            <label for="inputArchivo" class="labelArchivo" autocomplete="off"></label>
 
-            <input type="file" id="inputArchivo" name="" style="display: none;" (change)="handleFileChange($event)">
+            <input type="file" id="inputArchivo" name="" style="display: none;" (change)="handleFileChange($event)" autocomplete="off">
         </div>
 
         
