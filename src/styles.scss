@@ -1,1 +1,331 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    background-image: linear-gradient(to right, #2a2a2a, #151515);
+    height: 100%;
+    width: 100%;
+}
+
+
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 10px 90px;
+    max-width: 800px; /* Ajusta este valor según tus necesidades */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.post {
+    position: relative;
+    background-color: #c7c7c7;
+    border-radius: 10px;
+    color: #fff;
+    width: 150px;
+    height: 220px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+   
+}
+.post-title {
+    position: relative;
+    top: 100%;
+    left: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.crear-post{
+    background-color: #ff0303;
+    background-image: url('./assets/newPost.png');
+    border-radius: 10px;
+    color: #f6caf4;
+    width: 150px;
+    height: 220px;
+    box-shadow: 0 4px 8px 0 rgba(169, 220, 255, 0.517), 0 6px 20px 0 rgba(85, 166, 252, 0.19);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.crearPostElementInput {
+    width: 40%;
+    height: 70%;
+    background-image: linear-gradient(to right, #3e209a, #291164);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 1000;
+    margin: 0 auto;
+
+    
+}
+.menuCreatePost {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+  
+    background-image: url('./assets/menu.png');
+    background-position: center;
+    background-size: cover;
+    top: 50%;
+    left: 90%;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.517), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(-50%, -50%);
+    z-index: 1100;
+
+}
+.backgroundMenu{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    background-color: #000000a1;
+    filter: blur(5px);
+}
+.titleMenu{
+    position: relative;
+    width: 50%;
+    height: 19px;
+    top: -2%;
+    border: none;
+    background-color: #fff;
+   
+    
+   
+    border-radius: 10px;
+    z-index: 1000;
+    
+}
+input:focus {
+    outline: none;
+    background-color: #b2fa9a;
+    opacity: 0.7;
+    
+}
+.title{
+    left: 20%;
+    top: 20%;
+    font-size: 20px;
+    width: 100%;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+.containerInputMenu{
+    display: flex;
+    flex-direction: column;
+    left: 5%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+   
+    
+}
+
+.addPost{
+    width: 150px;
+    height: 150px;
+    background-image: url(./assets/addPost.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+    opacity: 0.6;
+}
+
+.addPost:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.file-upload {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-button {
+    
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Estilo adicional para hacerlo más visualmente atractivo */
+  
+  
+  /* Ocultar el input file */
+  .hidden {
+    display: none;
+  }
+  .delete{
+    width: 40px;
+    height: 40px;
+
+
+    margin-top: 2%;
+    opacity: 0.6;
+  }
+  ul{
+    list-style: none;
+    
+  }
+  .delete:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  .overlay {
+    position: relative;
+  }
+  
+  .overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .botton {
+    width: 50%;
+    height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #2d1a68, #240e30);
+    border-radius: 50px;
+    margin-top: 5%;
+    font-weight: bold; 
+    color: #c7c7c7;
+   letter-spacing: 1px;
+  }
+  .exit{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+  @media screen and (max-width: 1200px){
+  .crearPostElementInput{
+    width: 100%;
+    height: 100%;
+  }
+  .menuCreatePost{
+    position: absolute;
+    height: 40%;
+    width: 45%;
+    left: 50%;
+    top: 75%;
+    border-radius: 10px;
+  }
+  .containerInputMenu{
+    width: 100%;
+  }
+}
+  @media screen and (max-width: 900px) {
+    .crearPostElementInput{
+      width: 100%;
+      height: 100%;
+    }
+    .menuCreatePost{
+      position: absolute;
+      height: 40%;
+      width: 45%;
+      left: 50%;
+      top: 70%;
+      border-radius: 10px;
+    } 
+    .containerInputMenu{
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .crearPostElementInput{
+      width: 100%;
+      height: 100%;
+    }
+    .menuCreatePost{
+      position: absolute;
+      height: 40%;
+      width: 45%;
+      left: 50%;
+      top: 80%;
+      border-radius: 10px;
+    }
+    .containerInputMenu{
+      width: 100%;
+    }
+    }
+    @media screen and (max-width: 600px) {
+      .crearPostElementInput{
+        width: 100%;
+        height: 100%;
+      }
+      .menuCreatePost{
+        position: absolute;
+        height: 40%;
+        width: 45%;
+        left: 50%;
+        bottom: -10vh;
+        border-radius: 10px;
+      }
+      .containerInputMenu{
+        width: 100%;
+      }
+      }
+      @media screen and (max-width: 500px) {
+        .crearPostElementInput{
+          width: 100%;
+          height: 100%;
+        }
+        .menuCreatePost{
+          position: absolute;
+          height: 40%;
+          width: 45%;
+          left: 50%;
+          top: 70%;
+          border-radius: 10px;
+        }
+        .containerInputMenu{
+          width: 100%;
+        }
+        }
+        @media screen and (max-width: 400px) {
+          .crearPostElementInput{
+            width: 100%;
+            height: 100%;
+          }
+          .menuCreatePost{
+            position: absolute;
+            height: 40%;
+            width: 45%;
+            left: 50%;
+            top: 80%;
+            border-radius: 10px;
+          }
+          .containerInputMenu{
+            width: 100%;
+          }
+          }

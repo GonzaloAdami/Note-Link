@@ -1,0 +1,30 @@
+<div class="crearPostElementInput">
+    <div class="containerInputMenu">
+
+        <p class="title">Titulo</p>
+        <input type="text" class="titleMenu" id="title">
+
+        <p class="title">Link</p>
+        <input type="text" class="titleMenu" id="link">
+
+        <div class="addPost" (click)="seleccionarArchivo()">
+            <label for="inputArchivo" class="labelArchivo"></label>
+
+            <input type="file" id="inputArchivo" name="" style="display: none;" (change)="handleFileChange($event)">
+        </div>
+
+        
+        <button (click)="this.HTTP.POST(); this.servicio.mostrarDiv = !this.servicio.mostrarDiv; this.servicio.viewDATA();" class="botton">PUBLICAR</button>
+    </div>
+
+    <div class="menuCreatePost" id="menu">
+        <img src="../../assets/exit.png" alt="" class="exit" (click)="this.servicio.mostrarDiv = !this.servicio.mostrarDiv;">
+    </div>
+   
+</div>
+
+<div class="backgroundMenu"></div>
+
+    
+
+   
