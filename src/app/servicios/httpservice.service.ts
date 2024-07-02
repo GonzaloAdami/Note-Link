@@ -95,14 +95,14 @@ export class HTTPServiceService {
 
     const nuevoPost = {
       url: this.jsonConnectService.url,
-      title: this.jsonConnectService.title,
+      title: this.jsonConnectService.title, 
       img: this.jsonConnectService.img,
       id: this.jsonConnectService.id
     };
     this.jsonConnectService.post.push(nuevoPost);
     console.log(this.jsonConnectService.post);
     localStorage.setItem('posts', JSON.stringify(this.jsonConnectService.post));   
-    window.location.reload();
+   
   }
 
 

@@ -25,7 +25,7 @@ export class SystemService {
  
 
   deletePOST() {
-    let posts = document.getElementsByClassName("post");
+    let posts = document.getElementsByClassName("bodyPost");
     this.showOverlay = !this.showOverlay;
     for (let i = 0; i < posts.length; i++) {
       let post = posts[i] as HTMLElement;

@@ -1,16 +1,19 @@
-<nav>
-  <ul>
-    <li>
-      <img src="../assets/delete.png" class="delete" (click)="toggleOverlay(JSONconnect.post[0].id)">
 
 
-    </li>
-  </ul>
-</nav>
+<section class="sectionContainerPosts">
 
-<div class="post-container" id="post-container">
-  <div class="crear-post" (click)="this.servicio.mostrarDiv = !this.servicio.mostrarDiv;"></div>
-  <div *ngIf="servicio.mostrarDiv">
-    <app-menu></app-menu>
-  </div>
-</div>
+    <div class="post-container">
+      <div class="post crear" (click)="servicio.mostrarDiv = !servicio.mostrarDiv;"></div>
+      <div class="bodyPost"  *ngFor="let post of this.localStorage.get('targets')">
+          <a href="{{post.url}}" target="_blank" class="">
+            <div class="post" style="background-image: url({{post.img}});"></div>
+            <div class="name-limit"><img src="../assets/delete.ico" class="delete" (click)="this.deletePost(post.id,  $event)"><p class="post-name">{{post.name}}</p></div></a>
+            
+      </div>
+    </div>
+    
+    <div *ngIf="servicio.mostrarDiv">
+      <app-menu></app-menu>
+    </div>
+    
+</section>
