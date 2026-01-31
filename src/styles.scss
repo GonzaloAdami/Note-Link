@@ -1,0 +1,274 @@
+
+html {
+    background-image: linear-gradient(to right, #101637, #0b0f25);
+    height: 100%;
+    width: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  z-index: 10;
+}
+.sectionContainerPosts{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  width: 90%;
+  height: auto;
+  gap: 4em;
+  padding: 3em 0.5em;
+}
+
+
+.post {
+  position: relative;
+  background-color: #c7c7c7;
+  border-radius: 10px;
+  color: #fff;
+  width: 10em;
+  height: 15em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  margin: 0;
+  padding: 0;
+}
+
+.bodyPost{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10em;
+  height: 15em;
+  z-index: 1;
+}
+.post-name {
+  position: relative;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
+  font-size: 1.3em;
+  width: auto;
+  max-height: 2.5em;
+  white-space: nowrap; 
+  padding-top: 0.3em;
+  padding-left: 0.2em;
+}
+
+.name-limit {
+  display: flex;
+  float: left;
+  max-width: 11em;
+  max-height: 2.5em;
+  height: 2.5em;
+  overflow-x: scroll;
+  overflow-y: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis; 
+  
+}
+
+
+
+.name-limit::-webkit-scrollbar {
+  width: 0.1em; 
+  height:0.4em; 
+  margin: 2em;
+}
+
+.name-limit::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 10px; 
+
+}
+
+.name-limit::-webkit-scrollbar-thumb {
+  background: #557CF6;
+  border-radius: 1em; 
+
+}
+
+
+.name-limit::-webkit-scrollbar-thumb:hover {
+  background: #55b6f6; 
+}
+
+.crear{
+
+    background-image: url('./assets/addNewPost.webp');
+
+}
+
+input:focus {
+    outline: none;
+    background-color: #b2fa9a;
+    opacity: 0.7;
+    
+}
+.containerInputMenu{
+    display: flex;
+    flex-direction: column;
+    left: 5%;
+    height: 100%;
+    width: 100%;   
+}
+.addPost{
+    width: 7em;
+    height: 8em;
+    background-image: url(./assets/addPost.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+.addPost:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.file-upload {
+    position: relative;
+    display: inline-block;
+  }
+  .custom-button {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .delete{
+    width: 1.7em;
+    height: auto;
+    margin-top: 2%;
+    opacity: 0.6;
+    z-index: 100;
+    transform: scale(0.9);
+  }
+  ul{
+    list-style: none;
+    
+  }
+  .delete:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  .overlay {
+    position: relative;
+  }
+  
+  .overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .botton {
+    width: 50%;
+    height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #007bff, #0040ff);
+    border-radius: 50px;
+    font-weight: bold; 
+    color: #c7c7c7;
+   letter-spacing: 1px;
+  }
+  .botton:hover{
+    background-image: linear-gradient(to right, #26aaec, #006aff);
+  }
+  .botton:active{
+    transform: scale(0.8);
+  }
+  .exit{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    opacity: 0.8;
+  }
+  .exit:hover{
+    opacity: 1;
+  }
+  .exit:active{
+    transform: scale(0.7);
+  }
+  .hovered{
+    background-image: linear-gradient(to right, #ff0000, #ff0000);
+  }
+
+  @media only screen and (max-width: 600px) {
+   .post-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+    width: 90%;
+    height: auto;
+    gap: 12em;
+    padding: 6em 0.5em;
+   
+   }
+   .post{
+    transform: scale(1.4);
+   }
+   
+.name-limit {
+  display: flex;
+  float: left;
+  max-width: 11em;
+  max-height: 2.5em;
+  height: 2.5em;
+  overflow-x: scroll;
+  overflow-y: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis; 
+  margin-top: 4em;
+  transform: scale(1.4);
+  
+}
+
+.addPost{
+  width: 9em;
+  height: 10em;
+  background-image: url(./assets/addPost.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+.addPost:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.botton{
+ width: 8em;
+ height: 2em;
+  
+}
+  }

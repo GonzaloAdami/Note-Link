@@ -1,0 +1,35 @@
+<div class="fog">
+    <main class="crearPostElementInput">
+        <head class="containerInputMenu">
+    
+            <article class="containerInputAndText" >
+                <p class="title">Titulo</p>
+                <input type="text" class="inputDataTarget" id="name">
+            </article>
+    
+            <article class="containerInputAndText" >
+                <p class="title">Link</p>
+                <input type="text" class="inputDataTarget" id="url">
+            </article>
+    
+           
+                <label for="img" class="labelArchivo addPost" autocomplete="off">
+                    <input type="file" id="img" name=""   autocomplete="off" style="display: none;" (change)="onFileSelected($event)">
+                </label>
+         
+    
+            <button (click)="this.servicio.mostrarDiv = !this.servicio.mostrarDiv; this.datosInput()" class="botton">PUBLICAR</button>
+        </head>
+    
+        <div class="menuCreatePost" id="menu" style="background-image: url({{this.base64Image}});">
+            <img src="../../assets/exit.ico" alt="" class="exit" (click)="this.servicio.mostrarDiv = !this.servicio.mostrarDiv;">
+        </div>  
+    </main>
+    
+    <div class="backgroundMenu"></div>
+    
+        
+    
+       
+    
+</div>
